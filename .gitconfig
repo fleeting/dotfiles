@@ -1,0 +1,71 @@
+[color]
+   ui = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
+[alias]
+  st = status
+  ci = commit
+  br = branch -v
+  co = checkout
+  pu = pull
+  pr = pull --rabse
+  go = checkout -B
+  unstage = reset HEAD --
+  cim = commit -a -m
+  h = !git --no-pager log origin/master..HEAD --abbrev-commit --pretty=oneline
+  pom = !sh -c 'git h && echo Clear to push? Hit enter. && read && git push origin master' -
+  df = diff
+  lg = log -p
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  ls = ls-files
+  tags = tag -l
+  branches = branch -a
+  remotes = remote -v
+  undopush = push -f origin HEAD^:master
+
+[core]
+  quotepath = false
+  excludesfile = ~/.gitignore_global
+
+[merge]
+  log = true
+
+[branch "master"]
+  remote = origin
+  merge = refs/heads/master
+
+[url "git@github.com:"]
+  insteadOf = "gh:"
+  pushInsteadOf = "github:"
+  pushInsteadOf = "git://github.com/"
+[url "git://github.com/"]
+  insteadOf = "github:"
+[url "git@gist.github.com:"]
+  insteadOf = "gst:"
+  pushInsteadOf = "gist:"
+  pushInsteadOf = "git://gist.github.com/"
+[url "git://gist.github.com/"]
+  insteadOf = "gist:"
+[url "git@heroku.com:"]
+  insteadOf = "heroku:"
+
+[user]
+	name = James Fleeting
+	email = EMAIL
+
+[github]
+  user = jamesfleeting
+  token = TOKEN

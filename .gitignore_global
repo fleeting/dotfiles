@@ -1,0 +1,30 @@
+# Folder view configuration files
+.DS_Store
+Desktop.ini
+
+# Thumbnail cache files
+._*
+Thumbs.db
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Espresso
+*.esproj
+
+# SublimeText
+*.sublime-project
+
+#TextMate
+*.tmproj
+*.tmproject
+tmtags
+
+#vim
+.*.sw[a-z]
+*.un~
+Session.vim
+
+# Compiled Python files
+*.pyc
