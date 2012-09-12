@@ -1,0 +1,35 @@
+{
+	"bold_folder_labels": true,
+	"word_wrap": "true",
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"line_padding_top": 1,
+	"line_padding_bottom": 1,
+	"trim_trailing_white_space_on_save": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"file_exclude_patterns": [
+		".DS_Store",
+		".gitkeep"
+	],
+	"folder_exclude_patterns": [
+		".git",
+		".sass-cache",
+		"tmp"
+	],
+	"theme": "Soda Light.sublime-theme",
+	"todo":
+	{
+		"case_sensitive": true,
+		"patterns":
+		{
+			"BUG": "BUG[\\s]*?:+(?P<bug>.*)$",
+			"TODO(HIGH)": "TODO\\(HIGH\\)[\\s]*?:+(?P<todohigh>.*)$",
+			"TODO(LOW)": "TODO\\(LOW\\)[\\s]*?:+(?P<todolow>.*)$"
+		},
+		"result_title": "TODO Results"
+	}
+}
