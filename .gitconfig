@@ -63,8 +63,8 @@
   insteadOf = "heroku:"
 
 [user]
-	name = James Fleeting
-	email = EMAIL
+  name = James Fleeting
+  email = EMAIL
 
 [github]
   user = jamesfleeting
