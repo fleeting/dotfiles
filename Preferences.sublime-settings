@@ -18,7 +18,14 @@
 	"folder_exclude_patterns": [
 		".git",
 		".sass-cache",
-		"tmp"
+		"tmp",
+		".svn",
+		".hg",
+		"CVS",
+		"_build",
+		"dist",
+		"build",
+		"site"
 	],
 	"theme": "Soda Light.sublime-theme",
 	"todo":
