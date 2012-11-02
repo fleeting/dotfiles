@@ -2,6 +2,7 @@
 	"bold_folder_labels": true,
 	"word_wrap": "true",
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"font_face": "Source Code Pro",
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"line_padding_top": 1,
