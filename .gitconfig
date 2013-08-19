@@ -16,7 +16,9 @@
 
 [alias]
   st = status
+  cl = clone
   ci = commit
+  cm = commit -m
   br = branch -v
   co = checkout
   pu = pull
@@ -32,9 +34,16 @@
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
   ls = ls-files
   tags = tag -l
-  branches = branch -a
+	branches = !legit branches
   remotes = remote -v
   undopush = push -f origin HEAD^:master
+	switch = !legit switch \"$@\"
+	sprout = !legit sprout \"$@\"
+	unpublish = !legit unpublish \"$@\"
+	harvest = !legit harvest \"$@\"
+	sync = !legit sync \"$@\"
+	publish = !legit publish \"$@\"
+	graft = !legit graft \"$@\"
 
 [core]
   quotepath = false
@@ -47,25 +56,10 @@
   remote = origin
   merge = refs/heads/master
 
-[url "git@github.com:"]
-  insteadOf = "gh:"
-  pushInsteadOf = "github:"
-  pushInsteadOf = "git://github.com/"
-[url "git://github.com/"]
-  insteadOf = "github:"
-[url "git@gist.github.com:"]
-  insteadOf = "gst:"
-  pushInsteadOf = "gist:"
-  pushInsteadOf = "git://gist.github.com/"
-[url "git://gist.github.com/"]
-  insteadOf = "gist:"
-[url "git@heroku.com:"]
-  insteadOf = "heroku:"
-
 [user]
   name = James Fleeting
-  email = EMAIL
+  email = twofivethreetwo@gmail.com
 
 [github]
-  user = jamesfleeting
-  token = TOKEN
+	token = TOKEN
+	user = jamesfleeting
