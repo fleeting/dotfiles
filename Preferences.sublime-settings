@@ -1,10 +1,7 @@
 {
 	"bold_folder_labels": true,
-
-	"theme": "Flatland.sublime-theme",
-  	//"color_scheme": "Packages/Theme - Flatland/Flatland.tmtheme",
-  	//"theme": "Soda Light.sublime-theme",
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"theme": "Flatland.sublime-theme",
 	"file_exclude_patterns":
 	[
 		".DS_Store",
