@@ -11,7 +11,11 @@ ZSH_THEME="fleeting"
 alias zshconfig="sublime ~/.zshrc"
 alias ohmyzsh="sublime ~/.oh-my-zsh"
 
-# SSH aliases removed #
+alias biscuit='ssh biscuitserv@173.45.237.106'
+alias monkee='ssh monkee@173.45.242.248'
+alias bizcenter='ssh defvayne23@173.45.225.99'
+alias cranewest='ssh cranewest@173.45.224.188'
+alias bankserver='ssh fstbnk@173.45.229.250'
 
 alias flushdns='dscacheutil -flushcache'
 alias cwcms="git clone git@github.com:crane-west/cwCMS.git site && cd site/ && sublime ."
@@ -52,7 +56,7 @@ alias hidedeskicons="defaults write com.apple.finder CreateDesktop -bool false &
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(osx git)
+plugins=(osx git github git-extras node npm sublime bower nyan lol)
 
 source $ZSH/oh-my-zsh.sh
 
