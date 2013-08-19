@@ -11,11 +11,7 @@ ZSH_THEME="fleeting"
 alias zshconfig="sublime ~/.zshrc"
 alias ohmyzsh="sublime ~/.oh-my-zsh"
 
-alias biscuit='ssh biscuitserv@173.45.237.106'
-alias monkee='ssh monkee@173.45.242.248'
-alias bizcenter='ssh defvayne23@173.45.225.99'
-alias cranewest='ssh cranewest@173.45.224.188'
-alias bankserver='ssh fstbnk@173.45.229.250'
+# SSH aliases removed. #
 
 alias flushdns='dscacheutil -flushcache'
 alias cwcms="git clone git@github.com:crane-west/cwCMS.git site && cd site/ && sublime ."
