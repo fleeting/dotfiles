@@ -1,30 +1,74 @@
-# Folder view configuration files
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
 .DS_Store
-Desktop.ini
-
-# Thumbnail cache files
+.DS_Store?
 ._*
-Thumbs.db
-
-# Files that might appear on external disk
 .Spotlight-V100
 .Trashes
+Icon
+ehthumbs.db
+Thumbs.db
+.AppleDouble
+.LSOverride
 
-# Espresso
+# Espresso #
+############
 *.esproj
 
-# SublimeText
+# SublimeText #
+###############
 *.sublime-project
+*.sublime-workspace
 
-#TextMate
+# TextMate #
+############
 *.tmproj
 *.tmproject
 tmtags
 
-#vim
+# vim #
+#######
 .*.sw[a-z]
 *.un~
 Session.vim
 
-# Compiled Python files
-*.pyc
+# SASS #
+########
+*.sass-cache
+
+# SVN #
+#######
+.svn/
+
+# NODE #
+########
+npm-debug.log
+node_modules
