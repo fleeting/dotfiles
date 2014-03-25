@@ -22,28 +22,31 @@
   br = branch -v
   co = checkout
   pu = pull
-  pr = pull --rabse
+  pr = pull --rebase
   go = checkout -B
   unstage = reset HEAD --
   cim = commit -a -m
-  h = !git --no-pager log origin/master..HEAD --abbrev-commit --pretty=oneline
   pom = !sh -c 'git h && echo Clear to push? Hit enter. && read && git push origin master' -
   df = diff
+  tags = tag -l
+  undopush = push -f origin HEAD^:master
+  h = !git --no-pager log origin/master..HEAD --abbrev-commit --pretty=oneline
   lg = log -p
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
   ls = ls-files
-  tags = tag -l
-	branches = !legit branches
+  branches =› !legit branches
   remotes = remote -v
-  undopush = push -f origin HEAD^:master
-	switch = !legit switch \"$@\"
-	sprout = !legit sprout \"$@\"
-	unpublish = !legit unpublish \"$@\"
-	harvest = !legit harvest \"$@\"
-	sync = !legit sync \"$@\"
-	publish = !legit publish \"$@\"
-	graft = !legit graft \"$@\"
+  sclone = svn clone -s
+  spush = svn dcommit
+  spull = svn rebase
+  switch = !legit switch \"$@\"
+  sprout = !legit sprout \"$@\"
+  unpublish = !legit unpublish \"$@\"
+  harvest = !legit harvest \"$@\"
+  sync = !legit sync \"$@\"
+  publish = !legit publish \"$@\"
+  graft = !legit graft \"$@\"
 
 [core]
   quotepath = false
@@ -58,8 +61,7 @@
 
 [user]
   name = James Fleeting
-  email = twofivethreetwo@gmail.com
+  email = hello@jamesfleeting.com
 
-[github]
-	token = TOKEN
-	user = jamesfleeting
+[init]
+  templatedir = ~/.git_template
