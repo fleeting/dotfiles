@@ -20,17 +20,17 @@ function put_spacing() {
 
   local spacing=""
   for i in {1..$termwidth}; do
-    spacing="${spacing} " 
+    spacing="${spacing} "
   done
   echo $spacing
 }
 
 function precmd() {
 print -rP '
-$fg[cyan]%m: $fg[yellow]$(get_pwd)$(put_spacing)$(git_prompt_info)'
+$fg[blue]$(get_pwd)$(put_spacing)$(git_prompt_info)'
 }
 
-PROMPT='%{$reset_color%}→ '
+PROMPT='%{$reset_color%}❯ '
 
 ZSH_THEME_GIT_PROMPT_PREFIX="[git:"
 ZSH_THEME_GIT_PROMPT_SUFFIX="]$reset_color"
