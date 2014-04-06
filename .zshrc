@@ -11,7 +11,16 @@ ZSH_THEME="fleeting"
 alias zshconfig="atom ~/.zshrc"
 alias ohmyzsh="atom ~/.oh-my-zsh"
 
+alias ..="cd .."
+alias ...="cd ../.."
+alias ~="cd ~"
+alias -- -="cd -"
+
+alias ip='IP=`dig +short myip.opendns.com @resolver1.opendns.com`; echo "${IP}"; echo "${IP}" | pbcopy'
+alias lip='IP=`ipconfig getifaddr en0`; echo "${IP}"; echo "${IP}" | pbcopy'
+
 alias flushdns='dscacheutil -flushcache'
+
 alias mboywp="git svn clone -s https://monkeeboy.svn.beanstalkapp.com/mboy-wordpress-theme/ && open mboy-wordpress-theme"
 alias cwcms="git clone git@github.com:crane-west/cwCMS.git site && cd site/ && atom ."
 alias getdrought="git clone git@github.com:jamesfleeting/Drought.git site && cd site/ && atom ."
