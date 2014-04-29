@@ -35,18 +35,11 @@
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
   ls = ls-files
-  branches =› !legit branches
+	branches =› !legit branches
   remotes = remote -v
   sclone = svn clone -s
   spush = svn dcommit
   spull = svn rebase
-  switch = !legit switch \"$@\"
-  sprout = !legit sprout \"$@\"
-  unpublish = !legit unpublish \"$@\"
-  harvest = !legit harvest \"$@\"
-  sync = !legit sync \"$@\"
-  publish = !legit publish \"$@\"
-  graft = !legit graft \"$@\"
 
 [core]
   quotepath = false
@@ -61,7 +54,7 @@
 
 [user]
   name = James Fleeting
-  email = hello@jamesfleeting.com
+	email = hello@jamesfleeting.com
 
 [init]
-  templatedir = ~/.git_template
+	templatedir = ~/.git_template
