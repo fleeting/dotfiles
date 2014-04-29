@@ -8,6 +8,7 @@ ZSH_THEME="fleeting"
 # Aliases
 alias zshconfig="atom ~/.zshrc"
 alias ohmyzsh="atom ~/.oh-my-zsh"
+alias gitconfig="atom ~/.gitconfig"
 
 alias .="open ."
 alias ..="cd .."
