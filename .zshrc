@@ -22,12 +22,12 @@ alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to cl
 alias mboywp="git svn clone -s https://monkeeboy.svn.beanstalkapp.com/mboy-wordpress-theme/ && open mboy-wordpress-theme"
 alias cwcms="git clone git@github.com:crane-west/cwCMS.git site && cd site/ && atom ."
 alias getdrought="git clone git@github.com:jamesfleeting/Drought.git site && cd site/ && atom ."
-alias vagrantinit="git clone git@github.com:Monkee-Boy/Vagrant-LAMP-Stack.git"
-#alias yuicompress="java -jar ~/Sites/yuicompressor-2.4.7/build/yuicompressor-2.4.7.jar"
+alias vagrantinit="git clone git@github.com:Monkee-Boy/Vagrant-LAMP-Stack.git | echo '=> Cloning MBoy Vagrant Repo...'"
 alias hr="sh ~/misc/hr"
-alias r2d2="cd /Volumes/R2-D2/"
+alias r2d2="cd /Volumes/R2D2/"
+alias rebelbase="cd /Volumes/RebelBase/"
 
-# alias git="hub" #http://defunkt.io/hub/
+alias git="hub" #http://defunkt.io/hub/
 alias ls="ls -G"
 alias rm="rm -i"
 alias cp="cp -i"
