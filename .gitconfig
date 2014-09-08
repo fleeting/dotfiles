@@ -23,7 +23,8 @@
   co = checkout
   pu = pull
   pr = pull --rebase
-  go = checkout -B
+  go = checkout -b
+  done = merge --no-ff
   unstage = reset HEAD --
   cim = commit -a -m
   pom = !sh -c 'git h && echo Clear to push? Hit enter. && read && git push origin master' -
@@ -35,7 +36,7 @@
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
   ls = ls-files
-	branches =› !legit branches
+  branches = !legit branches
   remotes = remote -v
   sclone = svn clone -s
   spush = svn dcommit
@@ -54,7 +55,11 @@
 
 [user]
   name = James Fleeting
-	email = hello@jamesfleeting.com
+  email = hello@jamesfleeting.com
 
 [init]
-	templatedir = ~/.git_template
+  templatedir = ~/.git_template
+
+[filter "media"]
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f
