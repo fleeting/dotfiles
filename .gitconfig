@@ -28,6 +28,7 @@
   unstage = reset HEAD --
   cim = commit -a -m
   pom = !sh -c 'git h && echo Clear to push? Hit enter. && read && git push origin master' -
+  fuck = rebase --interactive HEAD~2
   df = diff
   tags = tag -l
   undopush = push -f origin HEAD^:master
