@@ -27,7 +27,10 @@ alias hr="sh ~/misc/hr"
 alias r2d2="cd /Volumes/R2D2/"
 alias rebelbase="cd /Volumes/RebelBase/"
 
-alias git="hub" #http://defunkt.io/hub/
+alias cmscache="rm -rfv app/tmp/cache/* && mkdir app/tmp/cache/persistent && touch app/tmp/cache/persistent/empty && mkdir app/tmp/cache/models && touch app/tmp/cache/models/empty"
+alias cmspublish="app/Console/cake publish --quiet"
+
+#alias git="hub" #http://defunkt.io/hub/
 alias ls="ls -G"
 alias rm="rm -i"
 alias cp="cp -i"
@@ -47,6 +50,7 @@ alias hidedeskicons="defaults write com.apple.finder CreateDesktop -boolean fals
 plugins=(osx git github git-extras node npm bower nyan lol)
 
 source $ZSH/oh-my-zsh.sh
+source ~/.fresh/build/shell.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:$PATH:$HOME/.rvm/bin/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin/sbin:/sbin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin:/:/Users/james/Sites/TSHM/cms/lib/Cake/Console
+export PATH=/usr/local/bin:$PATH:$HOME/.rvm/bin/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin/sbin:/sbin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin:/:/Users/james/Sites/TSHM/site/public/lib/Cake/Console:/Users/james/.composer/vendor/bin
