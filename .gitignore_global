@@ -72,3 +72,9 @@ Session.vim
 ########
 npm-debug.log
 node_modules
+
+# Extra #
+#########
+.notes
+.hidden/
+.coveralls.yml
