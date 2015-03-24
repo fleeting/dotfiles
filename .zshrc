@@ -20,12 +20,13 @@ alias flushdns='dscacheutil -flushcache'
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to clipboard.'"
 
 alias mboywp="git svn clone -s https://monkeeboy.svn.beanstalkapp.com/mboy-wordpress-theme/ && open mboy-wordpress-theme"
-alias cwcms="git clone git@github.com:crane-west/cwCMS.git site && cd site/ && atom ."
 alias getdrought="git clone git@github.com:jamesfleeting/Drought.git site && cd site/ && atom ."
 alias vagrantinit="git clone git@github.com:Monkee-Boy/Vagrant-LAMP-Stack.git | echo '=> Cloning MBoy Vagrant Repo...'"
 alias hr="sh ~/misc/hr"
 alias r2d2="cd /Volumes/R2D2/"
 alias rebelbase="cd /Volumes/RebelBase/"
+alias homesteadreload="vagrant reload acd9d27 --provision"
+alias vagrantvhost="sh ~/Sites/mBoy/mboy-vagrant/vagrantvhost.sh" # domain.dev /vagrant/path/to/site
 
 alias cmscache="rm -rfv app/tmp/cache/* && mkdir app/tmp/cache/persistent && touch app/tmp/cache/persistent/empty && mkdir app/tmp/cache/models && touch app/tmp/cache/models/empty"
 alias cmspublish="app/Console/cake publish --quiet"
@@ -53,4 +54,6 @@ source $ZSH/oh-my-zsh.sh
 source ~/.fresh/build/shell.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:$PATH:$HOME/.rvm/bin/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin/sbin:/sbin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin:/:/Users/james/Sites/TSHM/site/public/lib/Cake/Console:/Users/james/.composer/vendor/bin
+NODE_PATH="$HOME/.npm-packages/lib/node_modules:$NODE_PATH"
+export PATH=$HOME/.npm-packages/bin:$HOME/.rvm/bin:/usr/local/bin:$PATH:$HOME/.rvm/bin/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin/sbin:/sbin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin:/:/Users/fleeting/Sites/mBoy/TSHM/site/public/lib/Cake/Console:~/.composer/vendor/bin
+
