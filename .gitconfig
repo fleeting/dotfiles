@@ -1,66 +1,104 @@
 [color]
-   ui = auto
+	ui = auto
 [color "branch"]
-  current = yellow reverse
-  local = yellow
-  remote = green
+	current = yellow reverse
+	local = yellow
+	remote = green
 [color "diff"]
-  meta = yellow bold
-  frag = magenta bold
-  old = red bold
-  new = green bold
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
 [color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
+	added = yellow
+	changed = green
+	untracked = cyan
 
 [alias]
-  st = status
-  cl = clone
-  ci = commit
-  cm = commit -m
-  br = branch -v
-  co = checkout
-  pu = pull
-  pr = pull --rebase
-  go = checkout -b
-  done = merge --no-ff
-  unstage = reset HEAD --
-  cim = commit -a -m
-  pom = !sh -c 'git h && echo Clear to push? Hit enter. && read && git push origin master' -
-  fuck = rebase --interactive HEAD~2
-  df = diff
-  tags = tag -l
-  undopush = push -f origin HEAD^:master
-  h = !git --no-pager log origin/master..HEAD --abbrev-commit --pretty=oneline
-  lg = log -p
-  lol = log --graph --decorate --pretty=oneline --abbrev-commit
-  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-  ls = ls-files
-  branches = !legit branches
-  remotes = remote -v
-  sclone = svn clone -s
-  spush = svn dcommit
-  spull = svn rebase
+	st = status
+	cl = clone
+	ci = commit
+	cm = commit -m
+	ca = commit --amend
+	br = branch
+	co = checkout
+	pu = pull
+	pr = pull --rebase
+	go = checkout -b
+	done = merge --no-ff
+	unstage = reset HEAD --
+	cim = commit -a -m
+	pom = !sh -c 'git h && echo Clear to push? Hit enter. && read && git push origin master' -
+	log = log --graph --pretty=custom
+	fuck = rebase --interactive HEAD~2
+	tags = tag -l
+	undopush = push -f origin HEAD^:master
+	ls = ls-files
+	branch = branch --all
+	remotes = remote -v
+	sclone = svn clone -s
+	spush = svn dcommit
+	spull = svn rebase
+
+	# Find commits by source code.
+	logcc = "!f() { \
+		git log --pretty=custom --decorate --date=short -S\"$1\"; \
+	}; f"
+
+	# Find commits by commit message.
+	logcm = "!f() { \
+		git log --pretty=custom --decorate --date=short --grep=\"$1\"; \
+	}; f"
+
+	# List remote branches.
+	lrb = "!f() { \
+		remote="${1:-origin}"; \
+		git ls-remote --heads "$remote"; \
+	}; f"
 
 [core]
-  quotepath = false
-  excludesfile = ~/.gitignore_global
+	quotepath = false
+	editor = atom
+	excludesfile = ~/.gitignore_global
 
 [merge]
-  log = true
+	log = true
 
 [branch "master"]
-  remote = origin
-  merge = refs/heads/master
+	remote = origin
+	merge = refs/heads/master
 
 [user]
-  name = James Fleeting
-  email = hello@jamesfleeting.com
+	name = James Fleeting
+	email = hello@jamesfleeting.com
 
 [init]
-  templatedir = ~/.git_template
+	templatedir = ~/.git_template
 
 [filter "media"]
-  clean = git-media-clean %f
-  smudge = git-media-smudge %f
+	clean = git media clean %f
+	smudge = git media smudge %f
+	required = true
+
+[push]
+	# Make `git push` automatically push relevant
+	# annotated tags when pushing branches out.
+	followTags = true
+
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
+
+[pretty]
+	custom = "%C(magenta)%h%C(red)%d %C(yellow)%ar %C(green)%s %C(yellow)(%an)"
+	#                     │        │            │            │             └─ author name
+	#                     │        │            │            └─ message
+	#                     │        │            └─ date (relative)
+	#                     │        └─ decorations (branch, heads or tags)
+	#                     └─ hash (abbreviated)
