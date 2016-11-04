@@ -53,8 +53,13 @@ alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 alias r2d2="cd /Volumes/R2D2/"
 alias rebelbase="cd /Volumes/RebelBase/"
 alias addvhost="sh ~/Sites/puphpet/vhostalias.sh" # addvhost thestoryoftexas.dev /vagrant/TSHM/tshm-mbcms
-alias deploythatshit="cap production deploy"
 alias hosts='atom /etc/hosts'
+
+# Capistrano
+alias deploythatshit="cap production deploy"
+function deploy() {
+  cap "$@" deploy;
+}
 
 # M-Pire CMS
 alias cmscache="rm -rfv app/tmp/cache/* && mkdir app/tmp/cache/persistent && touch app/tmp/cache/persistent/empty && mkdir app/tmp/cache/models && touch app/tmp/cache/models/empty"
