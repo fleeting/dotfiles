@@ -1,0 +1,43 @@
+{
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "eslint.autoFixOnSave": true,
+  "editor.minimap.enabled": false,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "explorer.autoReveal": false,
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressUpdateNotice": false,
+    "suppressWelcomeNotice": true
+  },
+  "workbench.colorTheme": "One Dark Pro",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.panel.location": "right",
+  "python.disablePromptForFeatures": [
+    "pylint"
+  ],
+  "vsnotes.defaultNotePath": "/Users/fleeting/Sites/vscode/notes/",
+  "window.zoomLevel": 0,
+  "team.showWelcomeMessage": false,
+  "todohighlight.keywords": [
+    {
+      "text": "mb_TODO:",
+      "color": "#fff",
+      "backgroundColor": "#23a38f"
+    },
+    {
+      "text": "mb_content_TODO:",
+      "color": "#fff",
+      "backgroundColor": "#acca32"
+    }
+  ],
+  "todohighlight.isEnable": true
+}
