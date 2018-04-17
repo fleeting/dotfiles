@@ -23,7 +23,7 @@
 	br = branch
 	co = checkout
 	pu = pull
-	pr = pull --rebase
+	pur = pull --rebase
 	go = checkout -b
 	done = merge --no-ff
 	unstage = reset HEAD --
@@ -34,11 +34,11 @@
 	tags = tag -l
 	undopush = push -f origin HEAD^:master
 	ls = ls-files
-	branch = branch --all
 	remotes = remote -v
 	sclone = svn clone -s
 	spush = svn dcommit
 	spull = svn rebase
+	branchr = branch -a
 
 	# Find commits by source code.
 	logcc = "!f() { \
