@@ -20,14 +20,16 @@
 	ci = commit
 	cm = commit -m
 	ca = commit --amend
+	cim = commit -a -m
 	br = branch
 	co = checkout
+	cob = checkout -b
 	pu = pull
 	pur = pull --rebase
 	go = checkout -b
+	bra = branch -a
 	done = merge --no-ff
 	unstage = reset HEAD --
-	cim = commit -a -m
 	pom = !sh -c 'git h && echo Clear to push? Hit enter. && read && git push origin master' -
 	log = log --graph --pretty=custom
 	fuck = rebase --interactive HEAD~2
@@ -38,7 +40,6 @@
 	sclone = svn clone -s
 	spush = svn dcommit
 	spull = svn rebase
-	branchr = branch -a
 
 	# Find commits by source code.
 	logcc = "!f() { \
