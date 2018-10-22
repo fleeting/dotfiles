@@ -92,10 +92,11 @@ module.exports = {
     hyperTabs: {
       trafficButtons: true,
       tabIconsColored: true,
+      tabIcons: true,
     },
 
     // https://github.com/curz46/hyper-startup
-    commands: ['sh ./allthethings.sh']
+    //commands: ['sh ./allthethings.sh']
   },
 
   // a list of plugins to fetch and install from npm
@@ -104,7 +105,15 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ['hyper-snazzy', 'hyper-statusline', 'hyper-tabs-enhanced', 'hyperlinks', 'hyperterm-paste', 'hyperterm-alternatescroll', 'hyper-startup'],
+  plugins: [
+    'hyper-statusline',
+    'hyper-tabs-enhanced',
+    'hyperlinks',
+    'hyperterm-paste',
+    'hyperterm-alternatescroll',
+    'hyper-startup',
+    "hyper-snazzy"
+  ],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
