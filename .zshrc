@@ -1,3 +1,5 @@
+ZSH_DISABLE_COMPFIX=true
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -5,7 +7,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 ZSH_THEME="fleeting"
 
-DISABLE_UPDATE_PROMPT=true
+#DISABLE_UPDATE_PROMPT=true
 
 # Aliases
 alias zshconfig="code ~/.zshrc"
@@ -33,14 +35,16 @@ alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to cl
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
-alias r2d2="cd /Volumes/R2D2/"
-alias rebelbase="cd /Volumes/RebelBase/"
-alias addvhost="sh ~/Sites/puphpet/vhostalias.sh" # addvhost projectname.test /var/www/mBoy/projectname
+alias addvhost="sh ~/Sites/puphpet/vhostalias.sh" # addvhost projectname.test /var/www/projectname
 alias vssh="cd ~/Sites/puphpet && vagrant ssh"
 alias hosts='code /etc/hosts'
 
 # Deployments
 alias deploythatshit="fab production deploy"
+
+function ship() {
+  fab production deploy;
+}
 
 function deploy() {
   fab "$@" deploy;
@@ -50,7 +54,7 @@ function cdeploy() {
   cap "$@" deploy; # capistrano alias for our old deployment process
 }
 
-# M-Pire CMS
+# M-Pire CMS v2
 alias cmscache="rm -rfv app/tmp/cache/* && mkdir app/tmp/cache/persistent && touch app/tmp/cache/persistent/empty && mkdir app/tmp/cache/models && touch app/tmp/cache/models/empty"
 alias cmspublish="app/Console/cake publish --quiet"
 
@@ -76,6 +80,7 @@ plugins=(osx git github git-extras node npm bower nyan lol alias-tips smart-cd-w
 
 source $ZSH/oh-my-zsh.sh
 #source ~/.fresh/build/shell.sh
+source ~/allthethings.sh
 source ~/k.sh
 #source ~/bazel/bazel-bin/scripts/bazel-complete.bash
 
