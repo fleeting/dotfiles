@@ -60,6 +60,10 @@ tmtags
 *.un~
 Session.vim
 
+# VS Code #
+###########
+.vscode
+
 # SASS #
 ########
 .sass-cache/
