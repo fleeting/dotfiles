@@ -29,19 +29,44 @@
   "vsnotes.defaultNotePath": "/Users/fleeting/Sites/vscode/notes/",
   "window.zoomLevel": 0,
   "team.showWelcomeMessage": false,
-  "todohighlight.keywords": [
+  "better-comments.tags": [
     {
-      "text": "mb_TODO:",
+      "tag": "mb_TODO",
       "color": "#fff",
+      "strikethrough": false,
       "backgroundColor": "#23a38f"
     },
     {
-      "text": "mb_content_TODO:",
-      "color": "#fff",
-      "backgroundColor": "#acca32"
+      "tag": "!mb",
+      "color": "#23a38f",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "!",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "?",
+      "color": "#3498DB",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "todo",
+      "color": "#FF8C00",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "@",
+      "color": "#98C379",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
     }
   ],
-  "todohighlight.isEnable": true,
   "editor.formatOnType": false,
 
   "files.exclude": {
@@ -54,4 +79,5 @@
   "search.useIgnoreFiles": false,
   "terminal.explorerKind": "external",
   "search.location": "panel",
+  "files.trimTrailingWhitespace": true,
 }
