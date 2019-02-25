@@ -67,7 +67,6 @@ Session.vim
 # SASS #
 ########
 .sass-cache/
-*.css.map
 
 # SVN #
 #######
