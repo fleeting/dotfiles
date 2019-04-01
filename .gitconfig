@@ -15,22 +15,20 @@
 	untracked = cyan
 
 [alias]
-	st = status
-	cl = clone
-	ci = commit
-	cm = commit -m
-	ca = commit --amend
-	cim = commit -a -m
-	br = branch
-	co = checkout
-	cob = checkout -b
-	pu = pull
-	pur = pull --rebase
-	go = checkout -b
-	bra = branch -a
+	#st = status
+	#cl = clone
+	#ci = commit
+	#cm = commit -m
+	#ca = commit --amend
+	#cim = commit -a -m
+	#br = branch
+	#co = checkout
+	#cob = checkout -b
+	#pu = pull
+	#pur = pull --rebase
+	#go = checkout -b
+	#bra = branch -a
 	done = merge --no-ff
-	unstage = reset HEAD --
-	pom = !sh -c 'git h && echo Clear to push? Hit enter. && read && git push origin master' -
 	log = log --graph --pretty=custom
 	fuck = rebase --interactive HEAD~2
 	tags = tag -l
@@ -41,25 +39,9 @@
 	spush = svn dcommit
 	spull = svn rebase
 
-	# Find commits by source code.
-	logcc = "!f() { \
-		git log --pretty=custom --decorate --date=short -S\"$1\"; \
-	}; f"
-
-	# Find commits by commit message.
-	logcm = "!f() { \
-		git log --pretty=custom --decorate --date=short --grep=\"$1\"; \
-	}; f"
-
-	# List remote branches.
-	lrb = "!f() { \
-		remote="${1:-origin}"; \
-		git ls-remote --heads "$remote"; \
-	}; f"
-
 [core]
 	quotepath = false
-	editor = atom
+	editor = code
 	excludesfile = ~/.gitignore_global
 
 [merge]
@@ -71,7 +53,7 @@
 
 [user]
 	name = James Fleeting
-	email = hello@jamesfleeting.com
+	email = twofivethreetwo@gmail.com
 
 [init]
 	templatedir = ~/.git_template
