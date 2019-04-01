@@ -20,6 +20,8 @@ alias cp='cp -v'
 alias ls="ls -G"
 alias rm="trash"
 
+alias now="date-now --format='YYYYMMDDHHmmss'"
+
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
@@ -35,8 +37,9 @@ alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to cl
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
-alias addvhost="sh ~/Sites/puphpet/vhostalias.sh" # addvhost projectname.test /var/www/projectname
-alias vssh="cd ~/Sites/puphpet && vagrant ssh"
+alias addvhost="sh ~/Sites/puphpet-72/vhostalias.sh"
+alias vssh="cd ~/Sites/puphpet-72 && vagrant ssh"
+alias vup="cd ~/Sites/puphpet-72 && vagrant up"
 alias hosts='code /etc/hosts'
 
 # Deployments
@@ -60,8 +63,7 @@ alias cmspublish="app/Console/cake publish --quiet"
 
 alias habitat="ssh habitat"
 alias habitatdeploy="ssh habitatdeploy"
-
-alias g="git"
+alias habitatip='echo "198.58.101.143"'
 
 # Show/hide hidden files in Finder
 alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
@@ -76,13 +78,15 @@ alias update="sudo softwareupdate --install --all && brew update && brew upgrade
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(osx git github git-extras node npm bower nyan lol alias-tips smart-cd-with-k battery)
+plugins=(osx git github git-extras node npm lol smart-cd-with-k)
 
 source $ZSH/oh-my-zsh.sh
 #source ~/.fresh/build/shell.sh
 source ~/allthethings.sh
 source ~/k.sh
 #source ~/bazel/bazel-bin/scripts/bazel-complete.bash
+
+/Users/fleeting/.npm-packages/bin/git-tip
 
 # Customize to your needs...
 NODE_PATH="$HOME/.npm-packages/lib/node_modules:$NODE_PATH"
