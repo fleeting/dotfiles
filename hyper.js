@@ -76,7 +76,7 @@ module.exports = {
     env: {},
 
     // set to false for no bell
-    bell: 'SOUND',
+    bell: false,
 
     // if true, selected text will automatically be copied to the clipboard
     copyOnSelect: false,
@@ -94,9 +94,6 @@ module.exports = {
       tabIconsColored: true,
       tabIcons: true,
     },
-
-    // https://github.com/curz46/hyper-startup
-    //commands: ['sh ./allthethings.sh']
   },
 
   // a list of plugins to fetch and install from npm
@@ -106,12 +103,9 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-    'hyper-statusline',
     'hyper-tabs-enhanced',
     'hyperlinks',
     'hyperterm-paste',
-    'hyperterm-alternatescroll',
-    'hyper-startup',
     "hyper-snazzy"
   ],
 
