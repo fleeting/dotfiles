@@ -178,8 +178,16 @@
       "value": "#007fff"
     },
     {
+      "name": "C# Purple",
+      "value": "#68217A"
+    },
+    {
       "name": "Gatsby Purple",
       "value": "#639"
+    },
+    {
+      "name": "Java Blue-Gray",
+      "value": "#557c9b"
     },
     {
       "name": "JavaScript Yellow",
@@ -206,4 +214,11 @@
       "value": "#42b883"
     }
   ],
+  "showMusicMetrics": false,
+  "showGitMetrics": false,
+  "showWeeklyRanking": false,
+  "phpcs.executablePath": "/Users/fleeting/.composer/vendor/squizlabs/php_codesniffer/bin/phpcs",
+  "editor.fontFamily": "'Fira Code', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 12
 }
