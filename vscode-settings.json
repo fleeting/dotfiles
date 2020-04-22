@@ -20,7 +20,7 @@
     "suppressUpdateNotice": false,
     "suppressWelcomeNotice": true
   },
-  "workbench.colorTheme": "One Dark Pro",
+  "workbench.colorTheme": "SynthWave '84",
   "workbench.panel.location": "right",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "python.disablePromptForFeatures": [
@@ -78,7 +78,6 @@
   },
   "search.useIgnoreFiles": false,
   "terminal.explorerKind": "external",
-  "search.location": "panel",
   "files.trimTrailingWhitespace": true,
   "editor.renderWhitespace": "none",
   "editor.renderControlCharacters": false,
@@ -186,6 +185,10 @@
       "value": "#639"
     },
     {
+      "name": "Go Cyan",
+      "value": "#5dc9e2"
+    },
+    {
       "name": "Java Blue-Gray",
       "value": "#557c9b"
     },
@@ -220,5 +223,19 @@
   "phpcs.executablePath": "/Users/fleeting/.composer/vendor/squizlabs/php_codesniffer/bin/phpcs",
   "editor.fontFamily": "'Fira Code', monospace",
   "editor.fontLigatures": true,
-  "editor.fontSize": 12
+  "editor.fontSize": 13,
+  "files.associations": {
+  
+    "*.twig": "twig"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "webhint.enableTelemetry": "enabled",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": false
+  }
 }
