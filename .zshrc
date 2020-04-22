@@ -22,6 +22,23 @@ alias rm="trash"
 
 alias now="date-now --format='YYYYMMDDHHmmss'"
 
+#alias python='python3'
+#alias pip='pip3'
+
+# weather and the moon
+alias weather='curl -4 http://wttr.in/Austin'
+alias moon='curl -4 http://wttr.in/Moon'
+
+function bitbucket() {
+  osascript -e 'tell application "Firefox Developer Edition"' -e 'open location "https://bitbucket.org"' -e 'end tell' \
+            -e 'tell application "Firefox Developer Edition" to activate'
+}
+
+function mdn() {
+  osascript -e 'tell application "Firefox Developer Edition"' -e 'open location "https://developer.mozilla.org/en-US/"' -e 'end tell' \
+            -e 'tell application "Firefox Developer Edition" to activate'
+}
+
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
@@ -81,19 +98,23 @@ alias update="sudo softwareupdate --install --all && brew update && brew upgrade
 plugins=(osx git github git-extras node npm lol smart-cd-with-k)
 
 source $ZSH/oh-my-zsh.sh
-#source ~/.fresh/build/shell.sh
 source ~/allthethings.sh
 source ~/k.sh
-#source ~/bazel/bazel-bin/scripts/bazel-complete.bash
 
 /Users/fleeting/.npm-packages/bin/git-tip
 
 # Customize to your needs...
 NODE_PATH="$HOME/.npm-packages/lib/node_modules:$NODE_PATH"
-export PATH=$HOME/.npm-packages/bin:$HOME/.rvm/bin:/usr/local/bin:$PATH:$HOME/.rvm/bin/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin/sbin:/sbin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin:/:/Users/fleeting/Sites/mBoy/TSHM/site/public/lib/Cake/Console:~/.composer/vendor/bin:$HOME/bazel/output
+export PATH=$HOME/.npm-packages/bin:$HOME/.rvm/bin:/usr/local/bin:$PATH:$HOME/.rvm/bin/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin/sbin:/sbin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin:/:/Users/fleeting/Sites/mBoy/TSHM/site/public/lib/Cake/Console:/Users/fleeting/.composer/vendor/bin:$HOME/bazel/output
 
 export PATH="$HOME/.yarn/bin:$PATH"
 export JAVA_HOME="`/usr/libexec/java_home -v 1.8`"
 
 # added by travis gem
 [ -f /Users/fleeting/.travis/travis.sh ] && source /Users/fleeting/.travis/travis.sh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/fleeting/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/fleeting/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/fleeting/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/fleeting/google-cloud-sdk/completion.zsh.inc'; fi
