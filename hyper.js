@@ -4,7 +4,7 @@ module.exports = {
     fontSize: 12,
 
     // font family with optional fallbacks
-    fontFamily: 'Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily: 'Fira Code, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
     cursorColor: 'rgba(248,28,229,0.8)',
@@ -99,12 +99,9 @@ module.exports = {
   // a list of plugins to fetch and install from npm
   // format: [@org/]project[#version]
   // examples:
-  //   `hyperpower`
-  //   `@company/project`
-  //   `project#1.0.1`
+  //   "hyper-snazzy"
   plugins: [
     'hyper-tabs-enhanced',
-    'hyperlinks',
     'hyperterm-paste',
     "hyper-snazzy"
   ],
